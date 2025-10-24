@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Expense Tracker</h1>
+    <div class="container">
+   <form id="list" name="list" onsubmit="return displayinput()">
+    <input type="text" placeholder="Expenses name" id="expense_name" name="expense_name"/>
+    <input type="number" placeholder="Amount" name="Amount" id="Amount">
+   <select  id="category" required>
+    <option disabled selected>select catagories</option>
+    <option>food</option>
+    <option>transport</option>
+    <option>Entertainment</option>
+    <option>others</option>
+   </select>
+   <input type="date" class="date" name="date">
+   <input type="submit" value="Submit" class="but">
+</form> 
+    </div>
+    <div class="expense_table">
+   <table>
+    <thead>
+        <tr>
+        <th>Expenses</th>
+        <th>Amount</th>
+        <th>Categories</th>
+        <th>Date</th>
+        <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="expense-list">
+    </tbody>
+   </table>
+    </div>
+    <div class="total_list">
+        <label for="list_category">Total<span id="toal"></span></label>
+        <select id="total">
+            <option>All</option>
+            <option>food</option>
+            <option>transport</option>
+            <option>Entertainment</option>
+            <option>others</option>
+        </select>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
